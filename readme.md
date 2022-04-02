@@ -27,3 +27,15 @@ borrar la carpeta migrations
 dotnet ef migrations add InitialMigration --context appcomics.Data.ApplicationDbContext -o "C:\Users\Inteligo\Code\netcore\usmp\20221\appcomics\Data\Migrations"
 
 dotnet ef database update
+
+## Pasos para generar una tabla a partir de una clase
+
+1. Creo la clase y sus atributos
+
+2. Le agrego la anotacion [Table("nombre_tabla")]
+
+3. Agregar un PK  [DatabaseGenerated(DatabaseGeneratedOption.Identity)]  [Column("id")]
+
+3. Hago la migracion dotnet ef migrations add SegundaMigration --context appcomics.Data.ApplicationDbContext -o "C:\Users\Inteligo\Code\netcore\usmp\20221\appcomics\Data\Migrations"
+
+4. dotnet ef database update
