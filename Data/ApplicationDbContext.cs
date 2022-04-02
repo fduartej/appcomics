@@ -12,4 +12,6 @@ namespace appcomics.Data;
         }
 
         public DbSet<appcomics.Models.Contacto> DataContactos { get; set; }
+
+        public DbSet<appcomics.Models.Producto> DataProductos { get; set; }
     }
