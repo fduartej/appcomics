@@ -22,10 +22,23 @@ namespace appcomics.Controllers
             _logger = logger;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string? searchString)
         {
             var productos = from o in _context.DataProductos select o;
+            //SELECT * FROM t_productos -> &
+            if(!String.IsNullOrEmpty(searchString)){
+                productos = productos.Where(s => s.Name.Contains(searchString)); //Algebra de bool
+                // & + WHERE name like '%ABC%'
+            }
             return View(await productos.ToListAsync());
+        }
+
+        public async Task<IActionResult> Details(int? id){
+            Producto objProduct = await _context.DataProductos.FindAsync(id);
+            if(objProduct == null){
+                return NotFound();
+            }
+            return View(objProduct);
         }
     }
 }
