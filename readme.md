@@ -1,3 +1,7 @@
+## Prototipos del proyecto Commics
+
+https://www.figma.com/file/tgZbxZDIrarmFnsUsdvMSq/Comics-Store?node-id=0%3A1
+
 ## Pasos usados para esta APP
 
 git clone https://github.com/fduartej/appcomics.git
