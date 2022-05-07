@@ -16,4 +16,10 @@ namespace appcomics.Data;
         public DbSet<appcomics.Models.Producto> DataProductos { get; set; }
 
         public DbSet<appcomics.Models.Proforma> DataProforma { get; set; }
+
+        public DbSet<appcomics.Models.Pago> DataPago { get; set; }
+
+        public DbSet<appcomics.Models.Pedido> DataPedido { get; set; }
+
+         public DbSet<appcomics.Models.DetallePedido> DataDetallePedido { get; set; }
     }
