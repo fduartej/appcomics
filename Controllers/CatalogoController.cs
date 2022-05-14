@@ -60,6 +60,9 @@ namespace appcomics.Controllers
                 return  View("Index",productos);
             }else{
                 var producto = await _context.DataProductos.FindAsync(id);
+
+                Util.SessionExtensions.Set<Producto>(HttpContext.Session,"Producto", producto);
+                
                 Proforma proforma = new Proforma();
                 proforma.Producto = producto;
                 proforma.Precio = producto.Precio;
