@@ -39,6 +39,7 @@ namespace appcomics.Controllers
                 productos = productos.Where(s => s.Name.Contains(searchString)); //Algebra de bool
                 // & + WHERE name like '%ABC%'
             }
+            productos = productos.Where(s => s.Status.Contains("Activo"));
             
             return View(await productos.ToListAsync());
         }
