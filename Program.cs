@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using appcomics.Data;
 using Npgsql.EntityFrameworkCore.PostgreSQL;
+using appcomics.Integration.Sengrid;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +25,8 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
+
+builder.Services.AddSingleton<SendMailIntegration>();
 
 var app = builder.Build();
 
