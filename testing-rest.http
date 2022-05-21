@@ -1,6 +1,24 @@
 GET https://localhost:7289/api/producto HTTP/1.1
 Accept: application/json
 
+GET https://localhost:7289/api/producto/6 HTTP/1.1
+Accept: application/json
+
+POST https://localhost:7289/api/producto HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Avenger Forever V10",
+  "descripcion": "Este libro represanta la saga2",
+  "precio": 15.50,
+  "porcentajeDescuento": 0,
+  "imageName": "imagen2.jpg",
+  "status": "Activo"
+}
+
+
+
 POST https://api.sendgrid.com/v3/mail/send HTTP/1.1
 Authorization: Bearer <TOKEN>
 Content-Type: application/json
