@@ -1,2 +1,33 @@
 GET https://localhost:7289/api/producto HTTP/1.1
 Accept: application/json
+
+POST https://api.sendgrid.com/v3/mail/send HTTP/1.1
+Authorization: Bearer <TOKEN>
+Content-Type: application/json
+
+{
+  "categories": [
+    "demo"
+  ],
+  "from": {
+    "email": "fduartej@usmp.pe", //correo origen  settings\sender authentification
+    "name": "Mail Service"
+  },
+  "personalizations": [
+    {
+      "to": [
+        {
+          "email": "fduartej@gmail.com", //correo destino variable
+          "name": "Fred D"
+        }
+      ],
+      "subject": "Hola"
+    }
+  ],
+  "content": [
+    {
+      "type": "text/plain",
+      "value": "Hola ahora ya uso sendgrid!"
+    }
+  ],
+}

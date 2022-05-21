@@ -81,3 +81,8 @@ brandon162001@gmail.com|      |
 ## generar crud producto
 
 dotnet aspnet-codegenerator controller -name ProductoController -m Producto -dc appcomics.Data.ApplicationDbContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
+
+
+## SendGrid
+
+dotnet add package SendGrid --version 9.28.0
