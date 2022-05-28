@@ -79,8 +79,11 @@ namespace appcomics.Controllers
             return View("Create");
         }
 
-
-
+        public IActionResult Index()
+        {
+            
+            return View(_context.DataPago.ToList());
+        }
 
         public IActionResult ExportarExcel()
         {
