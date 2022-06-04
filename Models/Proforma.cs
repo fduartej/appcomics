@@ -13,7 +13,7 @@ namespace appcomics.Models
         [Column("id")]
         public int Id { get; set; }   
         public String UserID { get; set; }
-        public Producto Producto { get; set; }
+        public Producto? Producto { get; set; }
         public int Cantidad { get; set; }
 
         public Decimal Precio { get; set; }
